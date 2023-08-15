@@ -27,12 +27,13 @@ window.addEventListener('DOMContentLoaded', () => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const formState = {
-    email: emailInput.value,
-    message: messageInput.value,
-  };
-
-  console.log(formState);
+  if (emailInput.value !== '' || messageInput.value !== '') {
+    const formState = {
+      email: emailInput.value,
+      message: messageInput.value,
+    };
+    console.log(formState);
+  }
 
   localStorage.removeItem('feedback-form-state');
   emailInput.value = '';
