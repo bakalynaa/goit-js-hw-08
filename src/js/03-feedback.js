@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  if (emailInput.value !== '' || messageInput.value !== '') {
+  if (emailInput.value !== '' && messageInput.value !== '') {
     const formState = {
       email: emailInput.value,
       message: messageInput.value,
